@@ -1,0 +1,98 @@
+html {
+	height: 100%;
+	
+}
+body{
+	font-family: Roboto,Helvetica,Arial,sans-serif
+}
+button{
+
+  align-items: center;
+  background-color: #2196f3;
+  border-radius: 4px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: .875rem;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: .02857em;
+  line-height: 1.75;
+  margin: 8px;
+  min-width: 64px;
+  outline: none;
+  padding: 6px 16px;
+ 
+}
+*{
+    box-sizing:border-box;
+}
+#wrapper {
+	position: relative;
+	height: 100%;
+}
+body {
+	height: 100vh;
+	overflow: hidden;
+	background: #2e7d32;
+	margin: 0;
+}
+#score,#time,
+#end-btn,#restart-btn {
+	display: none;
+}
+#moles {
+	display: flex;
+	padding:50px;
+	height: 100%;
+	flex-wrap: wrap;
+}
+.isAboveGround img {
+	transform: translate(0, -75px);
+}
+#start,
+#restart {
+	top: 0;
+	position: absolute;
+}
+.bounce{
+	animation:1s ease bounce;
+}
+@keyframes bounce {
+  0% {transform: rotate(10deg);}
+  25% {transform: rotate(-10deg);}
+  50% {transform: rotate(20deg) scale(5,5);}
+  75% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
+#score {
+	left: 10px;
+	top: 105px;
+	position: absolute;
+}
+#time {
+	left: 10px;
+	top: 155px;
+	position: absolute;
+}
+.mole img {
+	transition: 0.2s ease transform;
+}
+.mole {
+	
+	margin: auto;
+	text-align: center;
+	flex: 0 0 30%;
+	position: relative;
+}
+.ground {
+	background: #263238;
+	width: 100px;
+	height: 50px;
+	left: calc(50% - 50px);
+	right: calc(50% - 50px);
+	bottom: 0;
+	position: absolute;
+}
